@@ -32,17 +32,22 @@ function Op(opPressed){
 function equalOp(equal){
     let hold2 = parseInt(document.getElementById("screen").value);
     let uns;
-    if(operaror == "*"){
-        uns = holdValue * hold2;
+    if(holdValue !== 0 || holdValue !== "0"){
+        if(operaror == "*"){
+            uns = holdValue * hold2;
+        }
+        else if(operaror == "/"){
+            uns = holdValue / hold2;
+        }
+        else if(operaror == "-"){
+            uns = holdValue - hold2;
+        }
+        else if(operaror == "+"){
+            uns = holdValue + hold2;
+        }
     }
-    else if(operaror == "/"){
-        uns = holdValue / hold2;
-    }
-    else if(operaror == "-"){
-        uns = holdValue - hold2;
-    }
-    else if(operaror == "+"){
-        uns = holdValue + hold2;
+    else{
+        document.getElementById("screen").value = 0;
     }
     document.getElementById("screen").value = uns;
 
