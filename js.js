@@ -7,10 +7,10 @@ function allClear(x){
 function button(btnPressed){
     let currentScreenValue = document.getElementById("screen").value;
 
-    if (btnPressed == "0" && currentScreenValue == "0"){
-        document.getElementById("screen").value = "0";
+    if (btnPressed == 0 && currentScreenValue == 0){
+        document.getElementById("screen").value = 0;
     }
-    else if (btnPressed !== "0" && currentScreenValue == "0"){
+    else if (btnPressed !== 0 && currentScreenValue == 0){
         document.getElementById("screen").value = btnPressed;
     }
     else{
@@ -18,8 +18,8 @@ function button(btnPressed){
     }
 }
 
-let holdValue;
-let operaror;
+let holdValue = 0;
+let operaror = 0;
 function Op(opPressed){
     let currentScreenValue = document.getElementById("screen").value;
 
@@ -31,24 +31,25 @@ function Op(opPressed){
 
 function equalOp(equal){
     let hold2 = parseInt(document.getElementById("screen").value);
-    let uns;
-    if(holdValue !== 0 || holdValue !== "0"){
-        if(operaror == "*"){
-            uns = holdValue * hold2;
-        }
-        else if(operaror == "/"){
-            uns = holdValue / hold2;
-        }
-        else if(operaror == "-"){
-            uns = holdValue - hold2;
-        }
-        else if(operaror == "+"){
-            uns = holdValue + hold2;
-        }
-    document.getElementById("screen").value = uns;
+    let uns = 0;
+    if(operaror == "*"){
+        uns = holdValue * hold2;
     }
-    else{
-        document.getElementById("screen").value = 0;
+    else if(operaror == "/"){
+        uns = holdValue / hold2;
+    }
+    else if(operaror == "-"){
+        uns = holdValue - hold2;
+    }
+    else if(operaror == "+"){
+        uns = holdValue + hold2;
     }
 
+    if(uns == NaN || uns == undefined){
+        uns = 0;
+    }
+
+    document.getElementById("screen").value = uns;
+    hold2 = 0;
+    holdValue=0;
 }
