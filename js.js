@@ -45,10 +45,10 @@ function equalOp(equal){
         else if(operaror == "+"){
             uns = holdValue + hold2;
         }
+    document.getElementById("screen").value = uns;
     }
     else{
         document.getElementById("screen").value = 0;
     }
-    document.getElementById("screen").value = uns;
 
 }
