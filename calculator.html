@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+
+    <title>CALCULATOR || HOME</title>
+</head>
+
+<body>
+    <div id="frame">
+        <!-- <div id="screen">0</div> -->
+        <input id="screen" type="text" value="0">
+
+        <div id="buttons">
+            <div onclick="button(7)" class="btn btn">7</div>
+            <div onclick="button(8)" class="btn btn">8</div>
+            <div onclick="button(9)" class="btn btn">9</div>
+            <div onclick="Op('*')" class="btn operator multiply">*</div>
+            
+            <div onclick="button(4)" class="btn btn">4</div>
+            <div onclick="button(5)" class="btn btn">5</div>
+            <div onclick="button(6)" class="btn btn">6</div>
+            <div onclick="Op('-')" class="btn operator minus">-</div>
+            
+            <div onclick="button(1)" class="btn btn">1</div>
+            <div onclick="button(2)" class="btn btn">2</div>
+            <div onclick="button(3)" class="btn btn">3</div>
+            <div onclick="Op('+')" class="btn operator plus">+</div>
+            
+            <div onclick="button(0)" class="btn btn0">0</div>
+            <div onclick="allClear(0)" class="btn btn">ac</div>
+            <div onclick="Op('/')" class="btn devide operator">/</div>
+            
+            <div onclick="equalOp('=')" class="btn operator equal">=</div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
